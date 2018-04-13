@@ -4,7 +4,7 @@ import json
 import logging
 
 COG_MANAGER = "cogs.cog_manager"
-with open('config.json') as config:
+with open('../config.json') as config:
     config_data = json.load(config)
 bot = commands.Bot(command_prefix=config_data["cmd_prefix"],
                    description="Renedition of PokeBot")
