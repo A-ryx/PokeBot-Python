@@ -1,8 +1,9 @@
 {
 	"cmd_prefix": "!",
-	"token": "",
+	"token": "NDM0NDQwOTgzMjcxMTc4MjU1.DbKctg.BZ6BOA311ZmKEJJsA0nC0gUqW6U
+",
 	"admin_list": [
-		"enter user id's here of who you want to be an admin"
+		"Alphi#5113"
 	],
 	"gift_list": {
 		"pokemon": {},
