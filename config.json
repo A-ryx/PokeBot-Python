@@ -1,15 +1,15 @@
 {
-	"cmd_prefix": "!",
+	"cmd_prefix": "p!",
 	"token": "NDM0NDQwOTgzMjcxMTc4MjU1.DbKctg.BZ6BOA311ZmKEJJsA0nC0gUqW6U",
 	"admin_list": [
 		"Alphi#5113",
-		"Jezus Christus#2757"
+		"Jezus Christus#2757",
 	],
 	"gift_list": {
 		"pokemon": {},
 		"lootbox": {}
 	},
-	"gift": false,
+	"gift": true,
 	"lootbox_pokemon_limit": 3,
 	"daily_reset_hour": 0,
 	"daily_lootbox_bronze_rate": 1,
