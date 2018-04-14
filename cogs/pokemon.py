@@ -1,6 +1,6 @@
 from cogs.modules.pokemon_functionality import PokemonFunctionality
 from discord.ext import commands
-
+import discord
 
 class PokemonCommands:
     """Handles Pokemon related commands"""
