@@ -302,4 +302,4 @@ class PokemonCommands:
         await self.cmd_function.claim_daily(ctx)
 @commands.command(name='pm', pass_context=True)
 async def pm(self,ctx):
-    await client.send_message(message.author, "content")
+    await self.send_message(message.author, "content")
