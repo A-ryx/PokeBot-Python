@@ -8,11 +8,10 @@ class PokemonCommands:
     def __init__(self, bot):
         self.cmd_function = PokemonFunctionality(bot)
 
-    @commands.command(name='give', pass_context=True, hidden=False)
+    @commands.command(name='give', pass_context=True, hidden=True)
     async def give(self, ctx, user_id, pkmn_name, shiny=False):
         """
         Gives a pokemon to a trainer (admin only cmd)
-
         @param ctx - context of the command sent
         @param user_id - user to give pokemon to
         @param pkmn_name - name of the pokemon to give to user
@@ -23,11 +22,10 @@ class PokemonCommands:
                                                      pkmn_name,
                                                      shiny)
 
-    @commands.command(name='delete', pass_context=True, hidden=False)
+    @commands.command(name='delete', pass_context=True, hidden=True)
     async def delete(self, ctx, user_id, pkmn_name, shiny=False):
         """
         Deletes a pokemon from the trainer (admin only cmd)
-
         @param ctx - context of the command sent
         @param user_id - user to give pokemon to
         @param pkmn_name - name of the pokemon to delete from the user
@@ -42,7 +40,6 @@ class PokemonCommands:
     async def giveloot(self, ctx, user_id, lootbox):
         """
         Deletes a pokemon from the trainer (admin only cmd)
-
         @param ctx - context of the command sent
         @param user_id - user to give pokemon to
         @param lootbox - lootbox to give to the user
@@ -55,7 +52,6 @@ class PokemonCommands:
     async def deleteloot(self, ctx, user_id, lootbox):
         """
         Deletes a pokemon from the trainer (admin only cmd)
-
         @param ctx - context of the command sent
         @param user_id - user to give pokemon to
         @param lootbox - lootbox to remove
@@ -75,7 +71,6 @@ class PokemonCommands:
     async def catch(self, ctx):
         """
         Catches a random pokemon
-
         @param ctx - context of the command sent
         """
         await self.cmd_function.catch_pokemon(ctx)
@@ -84,7 +79,6 @@ class PokemonCommands:
     async def c(self, ctx):
         """
         Shortcut to catch a random pokemon
-
         @param ctx - context of the command sent
         """
         await self.cmd_function.catch_pokemon(ctx)
@@ -93,7 +87,6 @@ class PokemonCommands:
     async def pinventory(self, ctx, page_number=0):
         """
         Displays the trainer's pokemon inventory
-
         @param ctx - context of the command sent
         @param page_number - page number in inventory
         """
@@ -103,7 +96,6 @@ class PokemonCommands:
     async def i(self, ctx, page_number=0):
         """
         Shortcut to display inventory
-
         @param ctx - context of the command sent
         @param page_number - page number in inventory
         """
@@ -113,7 +105,6 @@ class PokemonCommands:
     async def gif(self, pkmn_name: str, shiny=None):
         """
         Display a gif of the pokemon
-
         @param pkmn_name - name of the pokemon to find a gif of
         @param shiny - specify if pkmn is shiny or not
         """
@@ -123,7 +114,6 @@ class PokemonCommands:
     async def profile(self, trainer):
         """
         Obtains the profile of a trainer specified
-
         @param trainer - trainer profile to search for
         """
         await self.cmd_function.display_trainer_profile(trainer)
@@ -132,7 +122,6 @@ class PokemonCommands:
     async def ranking(self, option="t"):
         """
         Displays ranking of all the trainers
-
         @param option - options are:
                         l - legendary
                         s - shiny
@@ -145,7 +134,6 @@ class PokemonCommands:
     async def release(self, ctx, pkmn: str, quantity=1):
         """
         Releases a pokemon from your inventory
-
         @param pkmn - pkmn to be released
         """
         await self.cmd_function.release_pokemon(ctx, pkmn, quantity)
@@ -154,7 +142,6 @@ class PokemonCommands:
     async def r(self, ctx, pkmn: str, quantity=1):
         """
         Shortcut to release pokemon from your inventory
-
         @param pkmn - pkmn to be released
         """
         await self.cmd_function.release_pokemon(ctx, pkmn, quantity)
@@ -163,7 +150,6 @@ class PokemonCommands:
     async def hatch(self, ctx):
         """
         Hatches an egg from your inventory
-
         @param pkmn - pkmn to be released
         """
         await self.cmd_function.hatch_egg(ctx)
@@ -172,7 +158,6 @@ class PokemonCommands:
     async def h(self, ctx):
         """
         Shortcut to hatch an egg from your invertory
-
         @param pkmn - pkmn to be released
         """
         await self.cmd_function.hatch_egg(ctx)
@@ -181,7 +166,6 @@ class PokemonCommands:
     async def fuse(self, ctx, pkmn, *args):
         """
         Fuses all type-specific forms of a pokemon to get the original
-
         @param pkmn - pokemon to fuse into
         @param args - enter 5 pokemon to fuse to get to the original
                       (valid for only pokemon with over 5 known forms)
@@ -193,7 +177,6 @@ class PokemonCommands:
         """
         Shortcut to fuse all type-specific forms of a pokemon
         to get the original
-
         @param pkmn - pokemon to fuse into
         """
         await self.cmd_function.fuse_pokemon(ctx, pkmn, args)
@@ -202,7 +185,6 @@ class PokemonCommands:
     async def exchange(self, ctx, *args):
         """
         Exchanges 5 pokemon for a pokemon with a 5x shiny chance
-
         @param pkmn - pkmn to be released
         """
         await self.cmd_function.exchange_pokemon(ctx, args)
@@ -211,7 +193,6 @@ class PokemonCommands:
     async def e(self, ctx, *args):
         """
         Shortcut to exchange 5 pokemon for a pokemon with a 5x shiny chance
-
         @param pkmn - pkmn to be released
         """
         await self.cmd_function.exchange_pokemon(ctx, args)
@@ -220,7 +201,6 @@ class PokemonCommands:
     async def open(self, ctx, lootbox: str):
         """
         Opens a lootbox in the inventory
-
         @param lootbox - choices are:
                          b - bronze
                          s - silver
@@ -233,7 +213,6 @@ class PokemonCommands:
     async def o(self, ctx, lootbox: str):
         """
         Shortcut to open a lootbox in the inventory
-
         @param lootbox - choices are:
                          b - bronze
                          s - silver
@@ -260,7 +239,6 @@ class PokemonCommands:
     async def vendor(self, ctx, option: str):
         """
         Command to communicate with the night vendor
-
         @param options - options include:
                          i - info to see what's for sale
                          r - re-roll what's for sale
@@ -272,7 +250,6 @@ class PokemonCommands:
     async def v(self, ctx, option: str):
         """
         Shortcut to communicate with the night vendor
-
         @param options - options include:
                          i - info to see what's for sale
                          r - re-roll what's for sale
@@ -300,4 +277,3 @@ class PokemonCommands:
         Shortcut to claim a daily lootbox as well as a daily token
         """
         await self.cmd_function.claim_daily(ctx)
-
