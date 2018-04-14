@@ -20,8 +20,8 @@
 	"lootbox_silver_rate": 0.05,
 	"lootbox_gold_rate": 0.025,
 	"lootbox_legendary_rate": 0.0002,
-	"cooldown_seconds": 600,
-	"shiny_rate": 0.002,
+	"cooldown_seconds": 120,
+	"shiny_rate": 0.0001,
 	"shiny_hatch_multiplier": 6,
 	"shiny_exchange_multiplier": 5,
 	"shiny_lootbox_multiplier": 4
