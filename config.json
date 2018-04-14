@@ -2,7 +2,8 @@
 	"cmd_prefix": "!",
 	"token": "NDM0NDQwOTgzMjcxMTc4MjU1.DbKctg.BZ6BOA311ZmKEJJsA0nC0gUqW6U",
 	"admin_list": [
-		""
+		"Alphi#5113",
+		"Jezus Christus#2757"
 	],
 	"gift_list": {
 		"pokemon": {},
@@ -19,7 +20,7 @@
 	"lootbox_silver_rate": 0.05,
 	"lootbox_gold_rate": 0.025,
 	"lootbox_legendary_rate": 0.01,
-	"cooldown_seconds": 600,
+	"cooldown_seconds": 0,
 	"shiny_rate": 0.0002,
 	"shiny_hatch_multiplier": 6,
 	"shiny_exchange_multiplier": 5,
