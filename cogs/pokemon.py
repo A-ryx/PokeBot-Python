@@ -300,6 +300,4 @@ class PokemonCommands:
         Shortcut to claim a daily lootbox as well as a daily token
         """
         await self.cmd_function.claim_daily(ctx)
-@commands.command(name='pm', pass_context=True)
-async def pm(self,ctx):
-    await self.send_message(message.author, "content")
+
