@@ -8,7 +8,7 @@ class PokemonCommands:
     def __init__(self, bot):
         self.cmd_function = PokemonFunctionality(bot)
 
-    @commands.command(name='give', pass_context=True)
+    @commands.command(name='give', pass_context=True, hidden=False)
     async def give(self, ctx, user_id, pkmn_name, shiny=False):
         """
         Gives a pokemon to a trainer (admin only cmd)
@@ -23,7 +23,7 @@ class PokemonCommands:
                                                      pkmn_name,
                                                      shiny)
 
-    @commands.command(name='delete', pass_context=True)
+    @commands.command(name='delete', pass_context=True, hidden=False)
     async def delete(self, ctx, user_id, pkmn_name, shiny=False):
         """
         Deletes a pokemon from the trainer (admin only cmd)
