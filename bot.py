@@ -19,6 +19,7 @@ class PokeBot:
     @bot.event
     async def on_ready():
         try:
+            await bot.change_presence(game=discord.Game(name="Use pc!help."))
             bot.load_extension(COG_MANAGER)
         except Exception as e:
             error_msg = 'Failed to load cog manager\n{}: {}'.format(type(e).__name__, e)
