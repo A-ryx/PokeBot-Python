@@ -1,4 +1,5 @@
 from discord.ext import commands
+import discord
 from bot_logger import logger
 import json
 import logging
